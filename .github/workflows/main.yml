@@ -20,5 +20,7 @@ jobs:
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v2
         with:
-          comment-id: 1
-          reactions: eyes
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            This comment was written by a bot!
+          reactions: rocket
